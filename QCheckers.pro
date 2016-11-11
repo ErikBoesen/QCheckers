@@ -5,7 +5,5 @@ INCLUDEPATH += .
 QT += gui widgets
 
 # Input
-SOURCES += main.cpp
-
-HEADERS += \
-    main.h
+HEADERS += checkers.h
+SOURCES += checkers.cpp main.cpp
