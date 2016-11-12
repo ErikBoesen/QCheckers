@@ -8,6 +8,8 @@ class Checkers : public QWidget {
         Checkers(QWidget *parent = 0);
 
     protected:
-        void paintEvent(QPaintEvent *event);
-        void drawBoard();
+        void init();
+        void paintEvent(QPaintEvent *e);
+        void timerEvent(QTimerEvent *e);
+        void redraw();
 };

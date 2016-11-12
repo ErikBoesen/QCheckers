@@ -9,9 +9,9 @@ class Piece {
         int x;
         int y;
         bool is_king = false;
-        QString color;
 
-        Move(int x, int y);
-        King();
+    protected:
+        void move(int x, int y);
+        void king();
 
 };

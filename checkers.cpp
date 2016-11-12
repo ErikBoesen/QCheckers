@@ -3,19 +3,33 @@
 #include "piece.h"
 
 Checkers::Checkers(QWidget *parent)
-        : QWidget(parent)
-{ }
+        : QWidget(parent) {
+
+        redraw();
+}
 
 void Checkers::paintEvent(QPaintEvent *e) {
 
     Q_UNUSED(e);
 
-    drawBoard();
+    //redraw();
 }
 
-void Checkers::drawBoard() {
+void Checkers::init() {
+
+}
+
+void Checkers::timerEvent(QTimerEvent *e) {
+
+    Q_UNUSED(e);
+
+
+}
+
+void Checkers::redraw() {
 
     // Initialize painter.
+    // FIXME: It's very bad to do this every single time we redraw.
     QPainter canvas(this);
 
     // Set brush to black
@@ -30,16 +44,17 @@ void Checkers::drawBoard() {
 
     canvas.setBrush(QBrush("#e41f1f"));
     canvas.drawEllipse(75*1+10, 75*1+10, 55, 55);
-
 }
 
-Piece::Move(int new_x, int new_y) {
+/*
+void Piece::move(int new_x, int new_y) {
     int old_x = this.x;
     int old_y = this.y;
     this.x = new_x;
     this.y = new_y;
 }
 
-Piece::King() {
+void Piece::king() {
     this.is_king = true;
 }
+*/
