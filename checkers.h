@@ -9,5 +9,5 @@ class Checkers : public QWidget {
 
     protected:
         void paintEvent(QPaintEvent *event);
-        void drawCheckers(QPainter *qp);
+        void drawBoard();
 };
